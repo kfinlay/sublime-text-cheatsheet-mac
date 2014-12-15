@@ -240,22 +240,26 @@
 
 \subsection{\LaTeX{}Tools}
 \keys{\cmd+B} Save and build \\
-\keys{\cmd+break} Kill build \\
+% \keys{\cmd+break} Kill build \\
+\keys{\cmd+L}, \keys{J} Forward search from tex to pdf \\
+\keys{\cmd+L}, \keys{T}, \keys{F} Toggle window focus to pdf \\
+\keys{\cmd+L}, \keys{T}, \keys{S} Toggle pdf syncing after build \\
+\keys{\cmd+L}, \keys{T}, \keys{?} Status of toggles \\
+\keys{\cmd+L}, \keys{\backspace} Remove temp files \\
+\keys{\cmd+R} Goto sections and labels \\
+\keys{\cmd+L}, \keys{C} Turn word into command \\
+\keys{\cmd+L}, \keys{E} Turn word into environment \\
+begin,\keys{\tab} New environment \\
+\keys{\cmd+L}, \keys{\cmd+C} Selection to command \\
+\keys{\cmd+L}, \keys{\cmd+N} Selection to environment \\
+\keys{\cmd+L}, \keys{\cmd+E} Emphasis/italics \\
+\keys{\cmd+L}, \keys{\cmd+B} Bold \\
+\keys{\cmd+L}, \keys{\cmd+U} Underlined \\
+\keys{\cmd+L}, \keys{\cmd+T} Typewriter  \\
 \keys{\ctrl+\space} Auto-complete for everything \\
-\textbackslash{}ref, \keys{\cmd+L}, \keys{\ctrl+\space} Keyword to be followed by autocomplete to get references to labels and stuff \\
-\keys{\cmd+\shift+click} Inverse search from pdf \\
-\keys{\cmd}, \keys{L,T,F} Enable and disable focus to PDF. Needed for forward search and to change focus on build \\
-\keys{\cmd}, \keys{L,T,S} Toggle Forward Search on build \\
-\keys{\cmd}, \keys{L,T,?} Status of toggle \\
-\keys{\cmd}, \keys{L,J} Forward Search from tex to pdf \\
-\keys{\cmd}, \keys{L,C} Turn word into command \\
-\keys{\cmd}, \keys{L,E} Turn word into environment \\
-\keys{\cmd}, \keys{L,\cmd+C} Turn selected text into body of a command \\
-\keys{\cmd}, \keys{L,\cmd+N} Turn selected text into body of an environment \\
-\keys{\cmd}, \keys{L,\cmd+E} Turn selected text into emphasis \\
-\keys{\cmd}, \keys{L,\cmd+B} Turn selected text into bold \\
-\keys{\cmd}, \keys{L,\cmd+U} Turn selected text into underlined text \\
-\textbackslash{}cite, \keys{\cmd+L}, \keys{\ctrl+\space} Citations opened from folder's bib file \\
+% \textbackslash{}ref, \keys{\cmd+L}, \keys{\ctrl+\space} Keyword to be followed by autocomplete to get references to labels \\
+% \keys{\cmd+\shift+click} Inverse search from pdf \\
+% \textbackslash{}cite, \keys{\cmd+L}, \keys{\ctrl+\space} Citations opened from folder's bib file \\
 
 \subsection{AdvancedNewFile}
 \keys{\cmd+\Alt+N} New file from file/project directory (you can autocomplete directories) \\
@@ -266,8 +270,9 @@
 
 \subsection{Emmet}
 \textbf{remapped} \keys{\ctrl+X} Expand abbreviation (e.g. \texttt{ul>li.listitem*6>a}) \\
-\keys{p}, \keys{2}, \keys{0}, \keys{\tab} expands to \texttt{padding: 20px} \\
-\keys{f}, \keys{z}, \keys{\tab} expands to \texttt{font-size:}
+\keys{P}, \keys{2}, \keys{0}, \keys{\tab} Expands to \texttt{padding: 20px} \\
+\keys{F}, \keys{Z}, \keys{\tab} Expands to \texttt{font-size:} \\
+\keys{\shift+\cmd+Y} Evaluate math expression
 
 % \subsection{PlainTasks}
 % Formats your TODO files as checklists. \\
@@ -276,9 +281,9 @@
 % \keys{\cmd+D} Finish/unfinish a task \\
 % You can add tags with \keys{@}
 
-\subsection{FTPSync}
-\subsubsection{Remote Workflow}
-\textbf{remapped} \keys{\cmd+\ctrl+U}, \keys{\cmd+\ctrl+F} Upload the current file
+% \subsection{FTPSync}
+% \subsubsection{Remote Workflow}
+% \textbf{remapped} \keys{\cmd+\ctrl+U}, \keys{\cmd+\ctrl+F} Upload the current file
 
 \end{multicols}
 
