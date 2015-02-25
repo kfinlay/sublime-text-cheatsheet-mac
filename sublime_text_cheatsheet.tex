@@ -22,7 +22,7 @@
 % if using A4 paper. (This probably isn't strictly necessary.)
 % If using another size paper, use default 1cm margins.
 \ifthenelse{\lengthtest { \paperwidth = 11in}}
-    { \geometry{top=.5in,left=.5in,right=.5in,bottom=.5in} }
+    { \geometry{top=.25in,left=.25in,right=.25in,bottom=.25in} }
     {\ifthenelse{ \lengthtest{ \paperwidth = 297mm}}
         {\geometry{top=1cm,left=1cm,right=1cm,bottom=1cm} }
         {\geometry{top=1cm,left=1cm,right=1cm,bottom=1cm} }
@@ -76,14 +76,15 @@
 \setlength{\columnsep}{2pt}
 
 \begin{center}
-     \Large{\underline{Sublime Text Cheatsheet (Mac)}} \\
-     \small{Version 1.4, updated \today}
+     \large{\underline{Sublime Text Cheatsheet (Mac)}} \\
+     \small{Version 1.5, updated \today}
 \end{center}
 
+\vspace*{-\baselineskip}
 \section{General}
 \keys{\cmd+\shift+P} Command Palette \\
-\keys{\cmd+P} Goto Anything \\
-\keys{\cmd+R} Goto Symbol \\
+\keys{\cmd+P} \textbf{Goto Anything} \\
+\keys{\cmd+R} \textbf{Goto Symbol} \\
 \keys{\cmd+N} New File \\
 \keys{\cmd+S} Save File \\
 \keys{\cmd+\shift+S} Save File As \\
@@ -93,10 +94,13 @@
 \keys{\cmd+\shift+T} Reopen Closed File \\
 \keys{\cmd+\shift+N} New Window \\
 \keys{\cmd+\shift+W} Close Window \\
-\keys{\cmd+K}, \keys{\cmd+B} Show Sidebar \\
+% \keys{\cmd+K}, \keys{\cmd+B} Show Sidebar \\
+\keys{\ctrl+S} \textbf{Show Sidebar} \textsc{remap} \\
+\keys{\cmd+\ctrl+M} \textbf{Toggle Minimap} \textsc{remap} \\
 \keys{\ctrl+`} Show Console \\
 \keys{\cmd+\ctrl+F} Enter Full Screen \\
-\keys{\cmd+\ctrl+\shift+F} Enter Distraction Free Mode \\
+\keys{\cmd+\ctrl+\shift+F} \textbf{Enter Distraction-Free Mode} \\
+\keys{\cmd+\ctrl+P} \textbf{Switch Projects}
 
 \section{Moving/editing}
 \keys{\cmd+Z} Undo \\
@@ -110,9 +114,9 @@
 \keys{\cmd+]} Indent \\
 \keys{\cmd+[} Unindent \\
 \keys{\cmd+\ctrl+\arrowkeyup}/\keys{\arrowkeydown} Swap Line Up/Down \\
-\keys{\cmd+\shift+D} Duplicate Line \\
+\keys{\cmd+\shift+D} \textbf{Duplicate Line} \\
 \keys{\ctrl+\shift+K} Delete (kill) Line \\
-\keys{\cmd+J} Join Lines \\
+\keys{\cmd+J} \textbf{Join Lines} \\
 \keys{\cmd+/} Toggle Comment \\
 \keys{\cmd+\Alt+/} Toggle Block Comment \\
 \keys{\cmd+\shift+\return} Insert Line Before \\
@@ -132,10 +136,11 @@
 \keys{\cmd+K}, \keys{\cmd+L} Convert Selected Text to Lowercase \\
 \keys{\cmd+K}, \keys{\cmd+T} Convert Selected Text to Titlecase \\
 \keys{\cmd+\Alt+Q} Wrap Paragraph at Ruler \\
-\keys{F5} Sort Lines \\
+\keys{F5} \textbf{Sort Lines} \\
 \keys{\ctrl+F5} Sort Lines (Case Sensitive) \\
+\keys{F8} \textbf{Shuffle Lines} \textsc{remap} \\
 \keys{\ctrl+G} Goto Line \\
-\keys{\ctrl+M} Jump to Matching Brackets (does not work with HTML/XML tags) \\
+\keys{\ctrl+M} \textbf{Jump to Matching Bracket} \\
 \keys{\ctrl+L} Scroll to Selection (centers the screen to cursor) \\
 \keys{\ctrl+\Alt+\arrowkeyup}/\keys{\arrowkeydown} Scroll Line Up/Down \\
 \keys{\ctrl+Q} Record Macro \\
@@ -144,14 +149,15 @@
 \section{Selection}
 \keys{\cmd+U} Undo \\
 \keys{\cmd+\shift+U} Soft Redo \\
-\keys{\cmd+\shift+L} Split Selection Into Lines (inserts multiple cursors) \\
+\keys{\cmd+\shift+L} \textbf{Split Selection Into Lines} (inserts multiple cursors) \\
 \keys{\ctrl+\shift+\arrowkeyup}/\keys{\arrowkeydown} Add Previous/Next Line (inserts multiple cursors) \\
 \keys{\esc} Single Selection (when there are multiple selections) \\
+\keys{\cmd+click} \textbf{Create Cursors Anywhere} \\
 \keys{\cmd+A} Select All \\
-\keys{\cmd+D} Expand Selection to Word \\
+\keys{\cmd+D} \textbf{Expand Selection to Word (Then Next Match)} \\
 \keys{\cmd+L} Expand Selection to Line \\
 \keys{\cmd+\shift+A} Expand Selection to Tag (HTML/XML) \\
-\keys{\cmd+\shift+\space} Expand Selection to Scope \\
+\keys{\cmd+\shift+\space} \textbf{Expand Selection to Scope} \\
 \keys{\ctrl+\shift+M} Expand Selection to Brackets \\
 \keys{\cmd+\shift+J} Expand Selection to Indentation \\
 
@@ -163,7 +169,7 @@
 \keys{\cmd+\Alt+F} Replace \\
 \keys{\cmd+\Alt+E} Replace Next \\
 \keys{\cmd+\Alt+G} Quick Find (searches for the word under the cursor) \\
-\keys{\cmd+\ctrl+G} Quick Find All (selects all occurences of the word under the cursor) \\
+\keys{\cmd+\ctrl+G} \textbf{Quick Find All} (selects all occurences of the word under the cursor) \\
 \keys{\cmd+E} Use Selection for Find \\
 \keys{\cmd+\shift+E} Use Selection for Replace \\
 \keys{\cmd+\shift+F} Find in Files (all open files) \\
@@ -175,7 +181,7 @@
 \keys{\cmd+\Alt+]} Unfold \\
 \keys{\cmd+K}, \keys{\cmd+J} Unfold All \\
 \keys{\cmd+K}, \keys{\cmd+1} Fold All \\
-\keys{\cmd+K}, \keys{\cmd+2-9} Fold Level 1-9 \\
+\keys{\cmd+K}, \keys{\cmd+1-9} Fold Level 1-9 \\
 \keys{\cmd+K}, \keys{\cmd+T} Fold Tag Attributes (HTML/XML)
 
 \section{Bookmarking}
@@ -189,10 +195,18 @@
 \keys{\shift+F2} Previous Bookmark \\
 \keys{\cmd+\shift+F2} Clear Bookmarks
 
+\section{Splits/Tabs}
+\keys{\cmd+\Alt+1} Single Column \\
+\keys{\cmd+\Alt+2} Two Columns \\
+\keys{\cmd+\Alt+5} Grid \\
+\keys{\ctrl+1-4} Focus Group \\
+\keys{\ctrl+\shift+1-4} Move File to Group \\
+\keys{\cmd+1-4} Select Tab \\
+
 \section{Miscellaneous}
-\keys{F6} Toggle Spell Check \\
+\keys{F6} \textbf{Toggle Spell Check} \\
 \keys{\ctrl+F6} Next Misspelling \\
-\keys{\ctrl+\shift + F6} Previous Misspelling \\
+\keys{\ctrl+\shift+F6} Previous Misspelling \\
 \keys{\cmd+B} Build \\
 \keys{\ctrl+\space} Show Completions \\
 \keys{\cmd+\Alt+T} Special Characters
@@ -231,55 +245,58 @@
 % \newpage
 
 \section{Remapped commands}
-\keys{\ctrl+S} Show Sidebar \\
-\keys{\cmd+\ctrl+M} Toggle Minimap \\
 \keys{\cmd+\ctrl+K} Swap Line Up \\
 \keys{\cmd+\ctrl+J} Swap Line Down \\
 \keys{\cmd+\shift+K} Delete (kill) Line \\
-\keys{F8} Shuffle Lines\\
 
 \section{Plug-ins}
 
 \subsection{\LaTeX{}ing}
-\keys{\cmd+B} Save and build \\ %
-\keys{\cmd+\shift+B} Save, build, switch to pdf \\ %
-\keys{\ctrl+C} Kill build \\ %
-\keys{\cmd+L}, \keys{\cmd+J} Forward search from tex to pdf \\ %
-\keys{\cmd+L}, \keys{\cmd+O} Open pdf \\ %
+\keys{\cmd+B} Save And Build \\
+\keys{\cmd+\shift+B} Save, Build, Switch to pdf \\
+\keys{\ctrl+C} Kill build \\
+\keys{\cmd+L}, \keys{\cmd+J} Forward search from tex to pdf \\
+\keys{\cmd+L}, \keys{\cmd+O} Open pdf \\
 % \keys{\cmd+L}, \keys{T}, \keys{S} Toggle pdf syncing after build \\
 % \keys{\cmd+L}, \keys{T}, \keys{?} Status of toggles \\
-\keys{\cmd+L}, \keys{\backspace} Remove temp files (remap) \\ %
-\keys{\cmd+R} Goto sections and labels \\ %
-\keys{\cmd+L}, \keys{\cmd+S} Show snippets \\ %
-\keys{\cmd+L}, \keys{\cmd+C} Turn word into command \\ %
-\keys{\cmd+L}, \keys{\cmd+E} Turn word into environment \\ %
-begin,\keys{\tab} New environment \\ %
+\keys{\cmd+L}, \keys{\backspace} Remove temp files \textsc{remap} \\
+\keys{\cmd+R} Goto sections and labels \\
+\keys{\cmd+L}, \keys{\cmd+S} \textbf{Show Snippets} \\
+\keys{\cmd+L}, \keys{\cmd+C} Turn word into command \\
+\keys{\cmd+L}, \keys{\cmd+E} Turn word into environment \\
+begin,\keys{\tab} New environment \\
 % \keys{\cmd+L}, \keys{\cmd+C} Selection to command \\
-\keys{\cmd+L}, \keys{\cmd+N} Selection to environment \\ %
+\keys{\cmd+L}, \keys{\cmd+N} Selection to environment \\
 \keys{\cmd+L}, \keys{.} Close environment \\
-\keys{\cmd+L}, \keys{\cmd+W}, \keys{E} Emphasis/italics \\ %
-\keys{\cmd+L}, \keys{\cmd+W}, \keys{B} Bold \\ %
-\keys{\cmd+L}, \keys{\cmd+W}, \keys{U} Underlined \\ %
-\keys{\cmd+L}, \keys{\cmd+W}, \keys{T} Typewriter  (remap)\\ %
-\keys{\cmd+\return} Auto newline (table or item) \\%
+\keys{\cmd+L}, \keys{\cmd+W}, \keys{E} Emphasis/italics \\
+\keys{\cmd+L}, \keys{\cmd+W}, \keys{B} Bold \\
+\keys{\cmd+L}, \keys{\cmd+W}, \keys{U} Underlined \\
+\keys{\cmd+L}, \keys{\cmd+W}, \keys{T} Typewriter  \textsc{remap} \\
+\keys{\cmd+\return} Auto newline (table or item) \\
 \keys{\cmd+L}, \keys{\cmd+L} Auto-fill command \\
-\keys{\cmd+L}, \keys{\cmd+T} Toggle preferences \\ %
+\keys{\cmd+L}, \keys{\cmd+T} Toggle preferences \\
 
-\subsection{Markdown}
-\keys{\Alt+M} Preview Markdown in Browser (remap)\\
+\subsection{Markdown Preview}
+\keys{\Alt+M} Preview Markdown in Browser \textsc{remap} \\
 
 \subsection{AdvancedNewFile}
-\keys{\cmd+\Alt+N} New file from file/project directory \\ %(you can autocomplete directories) \\
+\keys{\cmd+\Alt+N} New file from file/project directory (you can autocomplete directories) \\
 % \keys{\cmd+\shift+\Alt+N} New file from file/project directory (adds an \texttt{\_\_init\_\_.py} file to each directory created)
+
+\subsection{Alignment}
+\keys{\cmd+\shift+A} Align by Delimiter \textsc{remap} \\
 
 % \subsection{ColorPicker}
 % \keys{\cmd+\shift+C} Pops up a color picker and, after picking a color, inserts a hexcode
 
 \subsection{Emmet}
-\keys{\ctrl+X} Expand abbreviation (e.g. \texttt{ul>li.listitem*6>a}) (remap)\\
+\keys{\ctrl+X} Expand abbreviation (e.g. \texttt{ul>li.listitem*6>a}) \textsc{remap} \\
 \keys{P}, \keys{2}, \keys{0}, \keys{\tab} Expands to \texttt{padding: 20px} \\
 \keys{F}, \keys{Z}, \keys{\tab} Expands to \texttt{font-size:} \\
-\keys{\shift+\cmd+Y} Evaluate math expression
+\keys{\shift+\cmd+Y} \textbf{Evaluate Math Expression}
+
+\subsection{Git}
+% \keys{\cmd+\shift+A} Align by Delimiter \textsc{remap} \\
 
 % \subsection{PlainTasks}
 % Formats your TODO files as checklists. \\
